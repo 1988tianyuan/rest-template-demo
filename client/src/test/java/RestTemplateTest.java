@@ -110,13 +110,9 @@ public class RestTemplateTest {
 		String url = urlPrefix + "/persons";
 		List<Person> personList = new LinkedList<>();
 		personList.add(new Person("张三", 180.0));
-		personList.add(new Person("张四", 180.0));
-		personList.add(new Person("张五", 180.0));
-		personList.add(new Person("张六", 180.0));
-		personList.add(new Person("张七", 180.0));
-		personList.add(new Person("张八", 180.0));
-		personList.add(new Person("张九", 180.0));
-		personList.add(new Person("张十", 180.0));
+		personList.add(new Person("李四", 180.0));
+		personList.add(new Person("王五", 180.0));
+		personList.add(new Person("赵六", 180.0));
 
 		CommonResponse response = restTemplate.postForObject(url, personList, CommonResponse.class);
 		logger.debug("\n\n addPerson: 请求成功, " + response);
@@ -126,8 +122,8 @@ public class RestTemplateTest {
 	public void postListTest2(){
 		String url = urlPrefix + "/persons";
 		List<Person> personList = new LinkedList<>();
-		personList.add(new Person("张十一", 180.0));
-		personList.add(new Person("张十二", 180.0));
+		personList.add(new Person("张一", 180.0));
+		personList.add(new Person("张二", 180.0));
 
 		HttpHeaders headers = new HttpHeaders();
 		MediaType type = MediaType.parseMediaType("application/json; charset=UTF-8");
